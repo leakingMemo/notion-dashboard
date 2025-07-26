@@ -47,7 +47,8 @@ A local server that generates real-time charts from your Notion database and ser
 
 ## Documentation
 
-See the [planning document](plan/local-chart-server-plan.md) for detailed architecture and implementation details.
+- [Usage Guide](docs/USAGE.md) - Detailed setup and usage instructions
+- [Planning Document](plan/local-chart-server-plan.md) - Architecture and implementation details
 
 ## License
 
