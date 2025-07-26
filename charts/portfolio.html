@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Distribution</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #ffffff;
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <canvas id="chart"></canvas>
+    </div>
+    <div class="last-updated">
+        Last updated: 7/26/2025, 11:14:07 PM
+    </div>
+    
+    <script>
+        const ctx = document.getElementById('chart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+  "labels": [
+    "Checking",
+    "Savings",
+    "Investment",
+    "Credit Card"
+  ],
+  "datasets": [
+    {
+      "label": "Amount",
+      "data": [
+        27317,
+        5316,
+        9147,
+        6928
+      ],
+      "backgroundColor": [
+        "rgb(255, 99, 132)",
+        "rgb(54, 162, 235)",
+        "rgb(255, 205, 86)",
+        "rgb(75, 192, 192)",
+        "rgb(153, 102, 255)"
+      ],
+      "hoverOffset": 4
+    }
+  ]
+},
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Portfolio Distribution'
+                    }
+                },
+            }
+        });
+    </script>
+</body>
+</html>
